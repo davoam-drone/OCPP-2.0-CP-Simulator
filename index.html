@@ -111,6 +111,8 @@
 			$('.indicator').hide();
 			$('#red').show();
 
+			const customerIdToken = '1';
+
 			function formatDate(date) {
 
 				var day = String(date.getDate());
@@ -586,7 +588,7 @@
 				sessionStorage.setItem('LastAction', "Authorize");
 				var Auth = JSON.stringify([2, id, "Authorize", {
 					"idToken": {
-						"idToken": "TAG1",
+						"idToken": customerIdToken,
 						"type": "Central"
 					},
 					"evseId": [1,2,3,4] //Just to test
@@ -619,7 +621,7 @@
 					"triggerReason": "Authorized",
 					"seqNo": 0,
 					"idToken": {
-						"idToken": "TAG1",
+						"idToken": customerIdToken,
 						"type": "Central"
 					},
 					"evse": {
@@ -649,7 +651,7 @@
 					"triggerReason": "MeterValuePeriodic",
 					"seqNo": 0,
 					"idToken": {
-						"idToken": "TAG1",
+						"idToken": customerIdToken,
 						"type": "Central"
 					},
 					"evse": {
@@ -693,7 +695,7 @@
 					"triggerReason": "Deauthorized",
 					"seqNo": 0,
 					"idToken": {
-						"idToken": "TAG1",
+						"idToken": customerIdToken,
 						"type": "Central"
 					},
 					"evse": {
